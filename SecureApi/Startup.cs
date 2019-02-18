@@ -19,6 +19,7 @@ namespace SecureApi
             HttpConfiguration config = new HttpConfiguration();
             WebApiConfig.Register(config);
             app.UseWebApi(config);
+            //Enable Swagger
             config.EnableSwagger(c => c.SingleApiVersion("v1", "A title for your API"))
                       .EnableSwaggerUi();
         }
